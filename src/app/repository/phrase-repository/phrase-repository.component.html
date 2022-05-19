@@ -1,0 +1,38 @@
+<div class="card my-5">
+    <div class="card-body">
+      <div class="row" [hidden]="!deleteMessage">  
+        <div class="alert alert-info alert-dismissible">  
+              <button type="button" class="close" data-dismiss="alert">×</button>  
+              <strong>Student Data Deleted</strong>  
+        </div> 
+      </div>
+
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Phrase</th>
+            <th scope="col">Definition</th>
+            <th scope="col">Sentence Example</th>
+            <th scope="col">Origin</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let phrase of phrases">
+            <td>{{ phrase.phraseId }}</td>
+            <td>{{ phrase.term }}</td>
+            <td>{{ phrase.definition }}</td>
+            <td>{{ phrase.sentenceExample }}</td>
+            <td>{{ phrase.origin }}</td>
+            <td>
+              <button 
+              (click)="deletePhrase(phrase.phraseId)" 
+              class='btn btn-primary'> 
+              <i class="fa fa-futboll-0">Delete</i>
+              </button> 
+            </td> 
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
