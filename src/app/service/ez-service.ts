@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Optional } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Phrase } from '../model/phrase';
@@ -9,7 +9,7 @@ export class EZService {
 
   private url: string;
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, @Optional() private phrase: Phrase) {
     this.url = 'http://localhost:8080/phrases'
    }
 

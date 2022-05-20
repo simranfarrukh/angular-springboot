@@ -1,0 +1,118 @@
+//randomComp
+ngOnInit() {
+    this.service.random().subscribe(data => {
+      this.phrase = data;
+    });
+    this.service.random().subscribe(result => this.gotoRandom());
+
+  }
+
+  getRandom(){
+    this.service.random().subscribe(data => this.gotoRandom());
+  }
+
+  gotoRandom(){
+    this.router.navigate(['phrases/random']);
+  }
+
+//randomHtml
+<!-- <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+              <tr>
+                <th>phraseId</th>
+                <th>term</th>
+                <th>definition</th>
+                <th>sentenceExample</th>
+                <th>origin</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>{{phrase.phraseId}}</td>
+                <td>{{phrase.term}}</td>
+                <td>{{phrase.definition}}</td>
+                <td>{{phrase.sentenceExample}}</td>
+                <td>{{phrase.origin}}</td>
+              </tr>
+            </tbody>
+          </table> -->
+
+//appComp
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <!-- <th scope="col">#</th> -->
+            <th scope="col">Phrase</th>
+            <th scope="col">Definition</th>
+            <th scope="col">Sentence Example</th>
+            <th scope="col">Origin</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let phrase of phrases">
+            <!-- <td>{{ phrase.phraseId }}</td> -->
+          <h2 class="card-title text-white py-3">{{ phrase.term }}</h2>
+          <h6 class="text-white">{{ phrase.definition }}</h6>
+          <p class="text-white">{{phrase.sentenceExample}}</p>
+          <sub class="text-white"><i>{{phrase.origin}}</i></sub>
+            <td>{{ phrase.term }}</td>
+            <td>{{ phrase.definition }}</td>
+            <td>{{ phrase.sentenceExample }}</td>
+            <td>{{ phrase.origin }}</td>
+            <!-- <td>
+              <button 
+              (click)="deletePhrase(phrase.phraseId)" 
+              class="alert alert-danger"> 
+              <i>Delete</i>
+              </button> 
+            </td>  -->
+            <td>
+              <button 
+              (click)="updatePhrase(phrase.phraseId, phrase)" 
+              class="alert alert-danger"> 
+              <a routerLink="/modifyphrases">Update a Phrase</a>
+              </button> 
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+//appCompTable
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card bg-dark my-5">
+        <div class="card-body">
+          <!-- <h2 class="card-title text-center text-white py-3">{{ title }}</h2>
+          <h6 class="text-center text-white py-3">{{ statement }}</h6> -->
+          <!-- <ul class="text-center list-inline py-3">
+
+            <li class="list-inline-item">
+              <a routerLink="/phrases" class="btn btn-info">List All Phrases</a>
+                </li>
+            <li class="list-inline-item">
+              <a routerLink="/addphrases" class="btn btn-info">Add a Phrase</a>
+                </li>
+            <li class="list-inline-item">
+              <a routerLink="/modifyphrases" class="btn btn-info">Update a Phrase</a>
+                </li>
+            <li class="list-inline-item">
+              <a routerLink="/removephrases" class="btn btn-info">Delete a Phrase</a>
+                </li>
+            <li class="list-inline-item">
+              <a routerLink="/randomphrase" class="btn btn-info">Random Phrase</a>
+            </li>
+
+          </ul> -->
+
+          <h2 class="card-title text-white py-3">{{ phrase.term }}</h2>
+          <h6 class="text-white">{{ phrase.definition }}</h6>
+          <p class="text-white">{{phrase.sentenceExample}}</p>
+          <sub class="text-white"><i>{{phrase.origin}}</i></sub>
+
+        </div>
+      </div>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
