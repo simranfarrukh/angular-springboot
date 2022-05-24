@@ -7,7 +7,7 @@ import { PhraseRepositoryComponent } from './repository/phrase-repository/phrase
 import { AddPhraseComponent } from './addphrase/add-phrase/add-phrase.component';
 import { RemovePhraseComponent } from './removephrase/remove-phrase/remove-phrase.component';
 import { ModifyPhraseComponent } from './modifyphrase/modify-phrase/modify-phrase.component';
-import { RandomPhraseComponent } from './randomphrase/random-phrase/random-phrase.component';
+// import { RandomPhraseComponent } from './randomphrase/random-phrase/random-phrase.component';
 import { EZService } from './service/ez-service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
@@ -19,7 +19,7 @@ import { FormsModule } from '@angular/forms';
     AddPhraseComponent,
     RemovePhraseComponent,
     ModifyPhraseComponent,
-    RandomPhraseComponent
+    // RandomPhraseComponent
   ],
   imports: [
     BrowserModule,

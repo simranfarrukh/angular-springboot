@@ -1,18 +1,13 @@
-<div class="card my-5">
-    <div class="card-body" *ngFor="let phrase of phrases">
-      <!-- <div *ngFor="let phrase of phrases"> -->
-        <h2 class="card-title py-3">{{ phrase.term }}</h2>
-          <h6 class="card-title py-3">{{ phrase.definition }}</h6>
-          <p class="card-title py-3">{{phrase.sentenceExample}}</p>
-          <sub class="card-title py-3"><i>{{phrase.origin}}</i></sub>
-      <!-- </div> -->
-      <!-- <div class="row" [hidden]="!deleteMessage">  
-        <div class="alert alert-danger alert-dismissible">  
-              <button type="button" class="close" data-dismiss="alert">×</button>  
-              <strong>Word Deleted</strong>  
-        </div> 
-      </div> -->
+<div class="container w-50 p-3 float-left">
 
-
+  <div class="card my-5" *ngFor="let phrase of phrases">
+    <div class="card-body col-md-12">
+        <h2 class="card-title">{{ phrase.term }}</h2>
+          <h6 class="card-title">{{ phrase.definition }}</h6>
+          <p class="card-title">{{phrase.sentenceExample}}</p>
+          <sub class="card-title"><i>{{phrase.origin}}</i></sub>
     </div>
   </div>
+
+</div>
+

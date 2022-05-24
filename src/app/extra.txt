@@ -116,3 +116,99 @@ ngOnInit() {
     </div>
   </div>
 </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card bg-dark my-5">
+        <div class="card-body">
+          <!-- <h2 class="card-title text-center text-white py-3">{{ title }}</h2>
+          <h6 class="text-center text-white py-3">{{ statement }}</h6> -->
+          <!-- <ul class="text-center list-inline py-3">
+
+            <li class="list-inline-item">
+              <a routerLink="/phrases" class="btn btn-info">List All Phrases</a>
+                </li>
+            <li class="list-inline-item">
+              <a routerLink="/addphrases" class="btn btn-info">Add a Phrase</a>
+                </li>
+            <li class="list-inline-item">
+              <a routerLink="/modifyphrases" class="btn btn-info">Update a Phrase</a>
+                </li>
+            <li class="list-inline-item">
+              <a routerLink="/removephrases" class="btn btn-info">Delete a Phrase</a>
+                </li>
+            <li class="list-inline-item">
+              <a routerLink="/randomphrase" class="btn btn-info">Random Phrase</a>
+            </li>
+
+          </ul> -->
+
+          <h2 class="card-title text-white">{{ phrase.term }}</h2>
+          <h6 class="text-white">{{ phrase.definition }}</h6>
+          <p class="text-white">{{phrase.sentenceExample}}</p>
+          <sub class="text-white"><i>{{phrase.origin}}</i></sub>
+
+        </div>
+      </div>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+
+
+
+        <!-- <li class="list-inline-item">
+        <a routerLink="/phrases" class="btn btn-info">List All Phrases</a>
+      </li> -->
+
+      <!-- <li class="list-inline-item">
+        <a routerLink="/modifyphrases" class="btn btn-info">Update a Phrase</a>
+      </li> -->
+      
+      <!-- <li class="list-inline-item">
+        <a routerLink="/removephrases" class="btn btn-info">Delete a Phrase</a>
+      </li> -->
+
+
+                <!-- <h2 class="card-title text-center text-white py-3">{{ title }}</h2>
+          <h6 class="text-center text-white py-3">{{ statement }}</h6> -->
+          <!-- <ul class="text-center list-inline py-3">
+
+            <li class="list-inline-item">
+              <a routerLink="/phrases" class="btn btn-info">List All Phrases</a>
+                </li>
+            <li class="list-inline-item">
+              <a routerLink="/addphrases" class="btn btn-info">Add a Phrase</a>
+                </li>
+            <li class="list-inline-item">
+              <a routerLink="/modifyphrases" class="btn btn-info">Update a Phrase</a>
+                </li>
+            <li class="list-inline-item">
+              <a routerLink="/removephrases" class="btn btn-info">Delete a Phrase</a>
+                </li>
+            <li class="list-inline-item">
+              <a routerLink="/randomphrase" class="btn btn-info">Random Phrase</a>
+            </li>
+
+          </ul> -->
+
+
+<!-- </div> -->
+      <!-- <div class="row" [hidden]="!deleteMessage">  
+        <div class="alert alert-danger alert-dismissible">  
+              <button type="button" class="close" data-dismiss="alert">×</button>  
+              <strong>Word Deleted</strong>  
+        </div> 
+      </div> -->
+
+                <!-- <button 
+              (click)="deletePhrase(phrase.phraseId)" 
+              class="alert alert-danger"> 
+              <i>Delete</i>
+              </button>
+
+      <div class="row" [hidden]="!deleteMessage">  
+        <div class="alert alert-danger alert-dismissible">  
+              <button type="button" class="close" data-dismiss="alert">×</button>  
+              <strong>Word Deleted</strong>  
+        </div>  -->

@@ -14,7 +14,7 @@ export class PhraseRepositoryComponent implements OnInit {
   phrases!: Phrase[];
   phrase!: Phrase;
 
-  // deleteMessage = false;
+  deleteMessage = false;
   // updateLink = {path: 'modifyphrases', component: ModifyPhraseComponent};
 
 
