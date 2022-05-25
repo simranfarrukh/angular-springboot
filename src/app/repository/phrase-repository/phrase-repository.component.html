@@ -1,4 +1,4 @@
-<div class="card my-5">
+<!-- <div class="card my-5">
     <div class="card-body">
       <div class="row" [hidden]="!deleteMessage">  
         <div class="alert alert-info alert-dismissible">  
@@ -35,4 +35,36 @@
         </tbody>
       </table>
     </div>
+  </div> -->
+
+  <!-- <table class="table table-bordered table-striped">
+    <tbody>
+      <tr *ngFor="let phrase of phrases">
+        <td>{{ phrase.phraseId }}</td>
+        <td>{{ phrase.term }}</td>
+        <td>{{ phrase.definition }}</td>
+        <td>{{ phrase.sentenceExample }}</td>
+        <td>{{ phrase.origin }}</td>
+        <td>
+          <button 
+          (click)="deletePhrase(phrase.phraseId)" 
+          class='btn btn-primary'> 
+          <i class="fa fa-futboll-0">Delete</i>
+          </button> 
+        </td> 
+      </tr>
+    </tbody>
+  </table> -->
+
+
+  <div class="container" *ngFor="let phrase of phrases">
+
+    <div class="card">
+    <div class="card-body">
+        <h5 class="card-title">{{phrase.term}}</h5>
+        <p class="card-text">{{phrase.definition}}</p>
+        <sub><i>{{phrase.origin}}</i></sub>
+      </div>
+    </div>
+  
   </div>

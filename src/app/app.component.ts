@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RandomPhraseComponent } from './randomphrase/random-phrase/random-phrase.component';
 
 @Component({
   selector: 'app-root',
@@ -6,11 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title: string;
-  statement: string;
-
-  constructor() {
-    this.title = "EZ-Turzumah";
-    this.statement = "User contributed and user editable. EZ-Turzumah is multilingual slang repository of untranslatable word aimed at bringing cultures closer one slang a time.";
-  }
+  
+  
 }
+

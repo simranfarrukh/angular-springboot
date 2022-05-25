@@ -11,6 +11,9 @@ import { RandomPhraseComponent } from './randomphrase/random-phrase/random-phras
 import { EZService } from './service/ez-service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { NavbarComponent } from './navbar/navbar/navbar.component';
+import { AboutComponent } from './about/about/about.component';
+import { FooterComponent } from './footer/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { FormsModule } from '@angular/forms';
     AddPhraseComponent,
     RemovePhraseComponent,
     ModifyPhraseComponent,
-    RandomPhraseComponent
+    RandomPhraseComponent,
+    NavbarComponent,
+    AboutComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

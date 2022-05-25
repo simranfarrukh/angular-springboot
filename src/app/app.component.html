@@ -1,32 +1,26 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <div class="card bg-dark my-5">
-        <div class="card-body">
-          <h2 class="card-title text-center text-white py-3">{{ title }}</h2>
-          <h6 class="text-center text-white py-3">{{ statement }}</h6>
-          <ul class="text-center list-inline py-3">
+<app-navbar></app-navbar>
 
-            <li class="list-inline-item">
-              <a routerLink="/phrases" class="btn btn-info">List All Phrases</a>
-                </li>
-            <li class="list-inline-item">
-              <a routerLink="/addphrases" class="btn btn-info">Add a Phrase</a>
-                </li>
-            <li class="list-inline-item">
-              <a routerLink="/modifyphrases" class="btn btn-info">Update a Phrase</a>
-                </li>
-            <li class="list-inline-item">
-              <a routerLink="/removephrases" class="btn btn-info">Delete a Phrase</a>
-                </li>
-            <li class="list-inline-item">
-              <a routerLink="/randomphrase" class="btn btn-info">Random Phrase</a>
-                </li>
+<br>
 
-          </ul>
-        </div>
-      </div>
-      <router-outlet></router-outlet>
+<div class="flex-container">
+    <div class="flex-child">
+        <app-random-phrase></app-random-phrase>
     </div>
-  </div>
+    <div class="flex-child">
+        <app-about></app-about>
+    </div>
 </div>
+
+<!-- <table>
+        <td></td>
+        <td></td>
+</table> -->
+
+<br>
+
+<router-outlet></router-outlet>
+
+<br>
+
+<app-footer></app-footer>
+
